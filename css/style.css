@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url(../image/bg-img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  color: #35e491;
+}
+
+#para {
+  font-weight: lighter;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.inputBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passBox {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #44475a;
+  color: #fff;
+  text-align: center;
+}
+
+.material-icons {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #35e491;
+  transition: 0.3s;
+}
+
+.material-icons:hover {
+  color: #50fa7b;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+  accent-color: #50fa7b;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: blue;
+}
+
+.genBtn {
+  width: 100%;
+  padding: 12px;
+  background: #35e491;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.genBtn:hover {
+  background: #4bff78;
+}
+
+#warnPara {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#resetBtn {
+  width: 100%;
+  padding: 12px;
+  background: #44475a;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+#resetBtn:hover {
+  background: #585c76;
+}
