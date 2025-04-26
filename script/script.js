@@ -72,14 +72,14 @@ copyIcon.addEventListener("click", () => {
 
   // Copy password to clipboard
   navigator.clipboard.writeText(passBox.value);
-  copyIcon.innerText = "check";
+  copyIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
   copyIcon.title = "Password Copied";
   warnPara.innerText = "Password copied successfully!";
   warnPara.style.color = "green";
 
   // Reset icon after 3 seconds
   setTimeout(() => {
-    copyIcon.innerHTML = "content_copy";
+    copyIcon.innerHTML = '<i class="fa-solid fa-copy"></i>';
     copyIcon.title = "";
     warnPara.innerText = "";
   }, 3000);
@@ -99,7 +99,7 @@ function resetGenerator() {
 
   warnPara.innerText = "";
 
-  copyIcon.innerHTML = "content_copy";
+  copyIcon.innerHTML = '<i class="fa-solid fa-copy"></i>';
   copyIcon.title = "";
 }
 

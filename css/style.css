@@ -1,131 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+html {
+  scroll-padding-top: 56px;
+  overflow-x: hidden;
 }
 
 body {
-  background: url(../image/bg-img.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
+    overflow-x: hidden;
 }
 
-.container {
-  padding: 20px;
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #03bca6, #004d40);
+}
+
+#home {
+  background: linear-gradient(135deg, #4caf50, #03a9f4);
+}
+
+#about {
+  background: linear-gradient(135deg, #0288d1, #00bcd4);
+}
+
+#main {
+  background: linear-gradient(135deg, #4bb851, #1976d2);
+}
+
+#testimonials {
+  background: linear-gradient(135deg, #4caf50, #1e88e5);
+}
+
+#faq {
+  background: linear-gradient(135deg, #388e3c, #0288d1);
+}
+
+footer {
+  background: linear-gradient(90deg, #00796b, #0288d1);
+}
+
+#about .card {
+  background-color: #e1f5fe;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h1 {
-  font-size: 30px;
-  color: #35e491;
+#about .card.bg-green {
+  background-color: #c8e6c9;
 }
 
-#para {
-  font-weight: lighter;
-  opacity: 0.8;
-  margin-bottom: 20px;
-  font-size: 12px;
+#about .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.inputBox {
-  position: relative;
-  display: flex;
-  align-items: center;
+#main .card {
+  background: linear-gradient(135deg, #4caf50, #03a9f4);
+  /* light blue to light green */
 }
 
-.passBox {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background: #44475a;
-  color: #fff;
-  text-align: center;
+#testimonials .card {
+  background: linear-gradient(135deg, #d0f0ff, #e8f5e9);
 }
 
-.material-icons {
-  position: absolute;
-  right: 10px;
-  cursor: pointer;
-  font-size: 22px;
-  color: #35e491;
-  transition: 0.3s;
+#faq .accordion-item {
+  background-color: #d4edda;
+  color: #155724;
 }
 
-.material-icons:hover {
-  color: #50fa7b;
+.customImg {
+  width: 70px;
+  height: 70px;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px 0;
-  font-size: 16px;
-}
-
-input[type="range"] {
-  width: 100%;
-  margin-top: 10px;
-  accent-color: #50fa7b;
-}
-
-input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: blue;
-}
-
-.genBtn {
-  width: 100%;
-  padding: 12px;
-  background: #35e491;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.genBtn:hover {
-  background: #4bff78;
-}
-
-#warnPara {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#resetBtn {
-  width: 100%;
-  padding: 12px;
-  background: #44475a;
-  color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
-}
-
-#resetBtn:hover {
-  background: #585c76;
+@media (max-width: 576px) {
+  .customCardWidth {
+    width: 18rem;
+  }
 }

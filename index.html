@@ -1,81 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>SafeKey</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeKey</title>
 
-    <meta
-      name="description"
-      content="SafeKey is a secure password generator web app that helps you create strong, customizable passwords to stay safe online. Try it now!"
-    />
-    <meta
-      name="keywords"
-      content="password generator, secure passwords, SafeKey, online security, strong passwords, cyber security, password manager"
-    />
-    <meta name="robots" content="index, follow" />
+  <!-- Favicon link -->
+  <link rel="shortcut icon" href="assets/favicon/safekey-favicon.png" type="image/x-icon" />
 
-    <link
-      rel="shortcut icon"
-      href="assets/favicon/safekey-favicon.png"
-      type="image/x-icon"
-    />
+  <!-- Meta Tags -->
+  <meta name="description"
+    content="SafeKey is a secure password generator that helps you create strong, random passwords with ease." />
+  <meta name="keywords"
+    content="SafeKey, password generator, secure passwords, random passwords, strong passwords, online password tool" />
+  <meta name="author" content="Your Name" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>SafeKey</h1>
-      <p id="para">
-        SafeKey is a password generator web app that helps you create strong
-        passwords, Try it now!
-      </p>
+  <!-- Font Awesome CSS CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <div class="inputBox">
-        <input type="text" class="passBox" id="passBox" disabled />
-        <span class="material-icons" id="copyIcon">content_copy</span>
+  <!-- Bootstrap CSS CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+
+  <!-- Custom CSS link -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS CDN CSS link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar section -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3 fw-semibold text-black" href="#home">
+          <img src="assets/logo/safekey_logo.png" alt="" width="35" height="33" class="d-inline-block align-text-top" />
+          SafeKey
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#main">Generate Password</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
 
-      <input type="range" min="1" max="30" value="8" id="inputSlider" />
-
-      <div class="row">
-        <p>Password Length</p>
-        <span id="sliderValue"></span>
+  <!-- Home section -->
+  <section id="home" class="py-5 d-flex align-items-center min-vh-100">
+    <div class="container pt-5 text-black">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-sm-12 col-md-3" data-aos="zoom-out" data-aos-duration="1300">
+          <img src="assets/images/img-1.png" class="img-fluid rounded mx-auto d-block w-100 h-100" alt="safekey-logo" />
+        </div>
+        <div class="col-12 col-sm-12 col-md-9 mt-4">
+          <div class="text-center">
+            <h1 class="mb-5 fs-1 lh-lg" data-aos="fade-right" data-aos-duration="1000">
+              SafeKey - Say Goodbye to Weak Passwords
+            </h1>
+            <p class="fs-4 text-justify lh-lg" data-aos="fade-left" data-aos-duration="1000">
+              Are you struggling to find the perfect password to keep your
+              online presence safe? Don’t worry — we’ve got the perfect
+              solution for you.
+              <strong class="fw-bolder fs-5">SafeKey</strong> is a secure and
+              reliable password generator that helps you create strong, random
+              passwords effortlessly. Protect your accounts from hackers, data
+              breaches, and cyber threats — with just a click.
+            </p>
+            <a href="#main" class="btn btn-success fs-4 p-2 mt-5 text-black fw-semibold" data-aos="fade-left"
+              data-aos-duration="1000">Try it Now!</a>
+          </div>
+        </div>
       </div>
-
-      <div class="row">
-        <label for="lowercase">Include Lowercase Letters (a-z)</label>
-        <input type="checkbox" name="lowercase" id="lowercase" />
-      </div>
-
-      <div class="row">
-        <label for="uppercase">Include Uppercase Letters (A-Z)</label>
-        <input type="checkbox" name="uppercase" id="uppercase" />
-      </div>
-
-      <div class="row">
-        <label for="numbers">Include Numbers (0-9)</label>
-        <input type="checkbox" name="numbers" id="numbers" />
-      </div>
-
-      <div class="row">
-        <label for="symbols">Include Symbols (@-*)</label>
-        <input type="checkbox" name="symbols" id="symbols" />
-      </div>
-
-      <button type="button" class="genBtn" id="genBtn">
-        Generate Password
-      </button>
-      <button type="reset" id="resetBtn">Reset</button>
-
-      <p id="warnPara"></p>
     </div>
+  </section>
 
-    <script src="script/script.js"></script>
-  </body>
+  <!-- About section -->
+  <section id="about" class="bg-success d-flex align-items-center min-vh-75">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-black">
+          <h2 class="my-5 fs-1 lh-lg" data-aos="zoom-out" data-aos-duration="1000">
+            Your Digital Safety Starts Here
+          </h2>
+          <p class="lh-lg fs-5" data-aos="zoom-in" data-aos-duration="1000">
+            <strong>SafeKey</strong> is your trusted companion for online
+            security. <br />
+            In a world where cyber threats are constantly evolving, using
+            strong and unpredictable passwords is your first line of defense.
+            <br />
+            SafeKey helps you generate highly secure, complex, and unique
+            passwords within seconds — no thinking required! <br />
+            Whether you’re setting up a new account, updating an old one, or
+            just being proactive about safety, SafeKey ensures your digital
+            life stays protected.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cards Row -->
+      <div class="row justify-content-center my-5 text-center ">
+        <div class="col-12 col-sm-6 col-md-3 mb-4 customCardWidth" data-aos="zoom-in-right" data-aos-duration="1000">
+          <div class="card h-100 card-bg">
+            <div class="card-body">
+              <h5 class="card-title text-success fs-1">
+                <i class="fa-solid fa-lock"></i>
+              </h5>
+              <h6 class="card-subtitle pt-2 text-black">
+                Strong Passwords Instantly
+              </h6>
+              <p class="card-text fs-6 pt-1 text-black text-opacity-75">
+                No more wasting time thinking of a secure password. SafeKey
+                generates powerful, complex passwords in just one click
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4 customCardWidth" data-aos="zoom-in-left" data-aos-duration="1000">
+          <div class="card h-100 card-bg">
+            <div class="card-body">
+              <h5 class="card-title text-success fs-1">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </h5>
+              <h6 class="card-subtitle pt-2 text-black">
+                Customizable & Secure
+              </h6>
+              <p class="card-text fs-6 pt-1 text-black text-opacity-75">
+                Whether you need numbers, symbols, uppercase, or a specific
+                length — SafeKey gives you full control to create the kind of
+                password that fits your need, without compromising security.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4 customCardWidth" data-aos="zoom-in-right" data-aos-duration="1000">
+          <div class="card h-100 card-bg">
+            <div class="card-body">
+              <h5 class="card-title text-success fs-1">
+                <i class="fa-solid fa-copy"></i>
+              </h5>
+              <h6 class="card-subtitle pt-2 text-black">One Click Copy</h6>
+              <p class="card-text fs-6 pt-1 text-black text-opacity-75">
+                Easily copy your generated password to the clipboard with a
+                single click — no need to highlight or manually select. It’s
+                fast, convenient, and hassle-free.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4 customCardWidth" data-aos="zoom-in-left" data-aos-duration="1000">
+          <div class="card h-100 card-bg">
+            <div class="card-body">
+              <h5 class="card-title text-success fs-1">
+                <i class="fa-solid fa-face-smile-beam"></i>
+              </h5>
+              <h6 class="card-subtitle pt-2 text-black">
+                Free & Easy to Use
+              </h6>
+              <p class="card-text fs-6 pt-1 text-black text-opacity-75">
+                SafeKey is 100% free and super easy to use. Just select your
+                options and generate — no sign-up, no ads, no hassle. Security
+                has never been this simple!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- main section -->
+  <section id="main" class="bg-warning d-flex align-items-center min-vh-100">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-8 text-black">
+          <h2 class="text-center mt-5 pb-5 fs-1 lh-lg" data-aos="zoom-out" data-aos-duration="1000">
+            Generate Your Strong Password
+          </h2>
+          <p class="fs-4" data-aos="zoom-in-right" data-aos-duration="1000">
+            Follow these simple steps to generate a strong, secure password
+            with SafeKey in no time!
+          </p>
+          <ol class="list-unstyled fs-5 lh-base" data-aos="zoom-in-left" data-aos-duration="1000">
+            <li>
+              <span class="fw-semibold">1. Adjust Password Length:</span> Use
+              the slider to set the desired password length.
+            </li>
+            <li>
+              <span class="fw-semibold">2. Select Character Types:</span>
+              Choose from Lowercase, Uppercase, Numbers, and Symbols to
+              customize the password strength.
+            </li>
+            <li>
+              <span class="fw-semibold">3. Generate Your Password:</span>
+              Click on the "Generate Password" button to create a secure
+              password.
+            </li>
+            <li>
+              <span class="fw-semibold">4. Copy to Clipboard:</span> Click the
+              copy icon to instantly copy the generated password for quick
+              use.
+            </li>
+            <li>
+              <span class="fw-semibold">5. Reset Settings:</span> Click the
+              reset button to clear selections and return to the default
+              settings.
+            </li>
+          </ol>
+        </div>
+
+        <div class="col-12 col-md-4" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="card shadow-lg rounded-4 mb-4">
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="inputSlider" class="form-label">
+                  Password Length: <span id="sliderValue">8</span>
+                </label>
+                <input type="range" class="form-range" min="4" max="30" value="8" id="inputSlider" />
+              </div>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="lowercase" checked />
+                <label class="form-check-label" for="lowercase">Include Lowercase Letters</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="uppercase" />
+                <label class="form-check-label" for="uppercase">Include Uppercase Letters</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="numbers" />
+                <label class="form-check-label" for="numbers">Include Numbers</label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="symbols" />
+                <label class="form-check-label" for="symbols">Include Symbols</label>
+              </div>
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="passBox" placeholder="Your password will appear here"
+                  readonly />
+                <span class="input-group-text" style="cursor: pointer" id="copyIcon" title="Copy to Clipboard"><i
+                    class="fa-solid fa-copy"></i></span>
+              </div>
+              <p id="warnPara" class="text-center small"></p>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-success" id="genBtn">
+                  Generate Password
+                </button>
+                <button class="btn btn-danger" id="resetBtn">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section id="testimonials" class="bg-primary text-white d-flex align-items-center min-vh-60">
+    <div class="container text-black">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="mt-5 pb-3 fs-1 lh-lg" data-aos="zoom-out" data-aos-duration="1000">
+            What Our Users Say
+          </h2>
+          <p class="mb-5 fs-5 lh-lg" data-aos="zoom-out" data-aos-duration="1000">
+            From tech enthusiasts to everyday users, people love how simple
+            and effective SafeKey is. Hear directly from our users about how
+            SafeKey made their online security easier and stress-free.
+          </p>
+        </div>
+
+        <div class="col-12 mb-5 pb-5">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img1.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Michael" />
+                  </div>
+                  <h5 class="mb-1">Michael</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "SafeKey simplified my online life. I no longer worry about creating complex passwords. It’s fast,
+                      free, and super secure — exactly what I needed for peace of mind."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img2.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Lei" />
+                  </div>
+                  <h5 class="mb-1">Lei</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "I use SafeKey daily for work and personal accounts. It’s reliable, easy, and keeps me safe from
+                      cyber threats. I recommend it to everyone concerned about digital security."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img3.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Ru" />
+                  </div>
+                  <h5 class="mb-1">Ru</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "Creating passwords used to be a hassle, but not anymore. SafeKey gives me control and confidence.
+                      It’s free, effective, and works perfectly across all my devices."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img4.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Olivia" />
+                  </div>
+                  <h5 class="mb-1">Olivia</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "SafeKey is a must-have tool in today’s digital age. I love how simple and customizable it is. No
+                      ads, no sign-up — just solid password protection on demand."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img5.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="James" />
+                  </div>
+                  <h5 class="mb-1">James</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "Thanks to SafeKey, I’ve upgraded my security game. It’s super convenient and generates unique
+                      passwords instantly. I feel way more secure with my accounts now."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img6.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Emily" />
+                  </div>
+                  <h5 class="mb-1">Emily</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "I never realized how vulnerable my passwords were until I started using SafeKey. It’s
+                      user-friendly, efficient, and gives me that extra layer of online safety I needed."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img7.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Logan" />
+                  </div>
+                  <h5 class="mb-1">Logan</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "Before SafeKey, I struggled with creating strong passwords. Now it’s so easy! It saves time and
+                      gives me peace of mind every time I log in."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img8.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Josehpa" />
+                  </div>
+                  <h5 class="mb-1">Josehpa</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      SafeKey is incredibly easy to use and makes me feel safer online. I love how quickly it generates
+                      strong passwords. Definitely a tool everyone should try."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img9.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Ethan" />
+                  </div>
+                  <h5 class="mb-1">Ethan</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "SafeKey has completely changed the way I manage my passwords. It's quick, secure, and super
+                      simple to use. I highly recommend it to everyone."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img10.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Emma" />
+                  </div>
+                  <h5 class="mb-1">Emma</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "I love how SafeKey works across all my devices. It’s super fast, reliable, and always there when
+                      I need a strong password instantly. Highly recommend!"
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img11.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Mason" />
+                  </div>
+                  <h5 class="mb-1">Mason</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "SafeKey helped me realize how important strong passwords are. It's fast, free, and so reliable. I
+                      honestly don’t know how I lived without it before."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card p-4 shadow rounded text-center mx-auto">
+                  <div class="d-flex justify-content-center">
+                    <img src="assets/images/testimonal-img12.jpg" class="img-fluid rounded-circle mb-3 customImg"
+                      alt="Jack" />
+                  </div>
+                  <h5 class="mb-1">Jack</h5>
+                  <blockquote class="blockquote">
+                    <p class="fs-6">
+                      "SafeKey feels like having a personal security guard for my accounts. Fast, smart, and hassle-free
+                      — it’s honestly one of the best tools I’ve found."
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+            </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="text-white d-flex align-items-center min-vh-100 py-5">
+    <div class="container text-black">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mb-4">
+          <h2 class="mb-5 fs-1 lh-lg" data-aos="zoom-out" data-aos-duration="1000">
+            Frequently Asked Questions
+          </h2>
+          <p class="fs-5 lh-lg" data-aos="zoom-out" data-aos-duration="1000">
+            Got questions about SafeKey? We’ve got answers. Here are some of
+            the most common things people ask before using our password
+            generator.
+          </p>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  What is SafeKey?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  SafeKey is a secure and easy-to-use password generator that
+                  helps you create strong, random passwords to protect your
+                  online accounts from hackers and data breaches.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Is SafeKey free to use?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  Yes! SafeKey is completely free to use with no hidden
+                  charges.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What makes a password "strong"?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  A strong password is long, unpredictable, and includes a mix of uppercase and lowercase letters,
+                  numbers, and special symbols — exactly what SafeKey generates.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Can I customize the type of characters in my password?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  Definitely! You can choose to include or exclude uppercase
+                  letters, lowercase letters, numbers, and special symbols
+                  based on your preference.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  How do I copy the generated password?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  Just click the “Copy” button next to your password — it’ll
+                  be instantly copied to your clipboard for quick use.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Does SafeKey require an internet connection?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  No, once the page loads, password generation happens locally in your browser. No active internet
+                  connection is needed after that.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  How strong are the passwords generated by SafeKey?
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  SafeKey uses random character generation, including uppercase, lowercase, numbers, and symbols, making
+                  your passwords highly secure and difficult to crack.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  How often should I change my passwords?
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  It's recommended to change your passwords every 3–6 months, especially for important accounts like
+                  banking, email, and social media.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Can I trust browser-based password generation?
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  Yes! SafeKey runs completely inside your browser without sending any information over the internet,
+                  ensuring maximum privacy and security.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Is the password saved anywhere?
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  No. SafeKey does not store or share any passwords you
+                  generate. Everything happens right in your browser for
+                  maximum privacy.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  Is SafeKey open source?
+                </button>
+              </h2>
+              <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-dark">
+                  Yes! SafeKey’s code is open source, allowing anyone to inspect it for transparency and
+                  trustworthiness. You can check the full code <a href="https://github.com/premkrrajbhar/SafeKey"
+                    target="_blank" class="text-decoration-none">here</a>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="text-light py-4">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-9 mb-3">
+          <h5 class="text-uppercase">SafeKey</h5>
+          <ol class="list-unstyled">
+            <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+            <li><a href="#main" class="text-light text-decoration-none">Generate Password</a></li>
+            <li><a href="#testimonials" class="text-light text-decoration-none">Testimonial</a></li>
+            <li><a href="#faq" class="text-light text-decoration-none">FAQ</a></li>
+          </ol>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <h5 class="text-uppercase">SafeKey on GitHub</h5>
+          <p>
+            <a href="https://github.com/premkrrajbhar/SafeKey" target="_blank" class="text-light text-decoration-none">
+              View SafeKey Open Source Project <br><span class="customSize">(MIT Licensed)</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center pt-3 border-top">
+        <small>© 2025 SafeKey. All rights reserved by <a href="https://github.com/premkrrajbhar/" target="_blank"
+            class="text-decoration-none text-light">Prem Kumar</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS link -->
+  <script src="script/script.js"></script>
+
+  <!-- CDN JS link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS CDN JS link and init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
