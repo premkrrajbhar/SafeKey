@@ -40,6 +40,34 @@ Check out the app live here: **[SafeKey](https://premkrrajbhar.github.io/SafeKey
 ## 📂 Project Structure
 
 ```
+├── LICENSE
+├── README.md
+├── assets
+│   ├── favicon
+│   │   └── safekey-favicon.png
+│   ├── images
+│   │   ├── img-1.png
+│   │   ├── testimonal-img1.jpg
+│   │   ├── testimonal-img10.jpg
+│   │   ├── testimonal-img11.jpg
+│   │   ├── testimonal-img12.jpg
+│   │   ├── testimonal-img2.jpg
+│   │   ├── testimonal-img3.jpg
+│   │   ├── testimonal-img4.jpg
+│   │   ├── testimonal-img5.jpg
+│   │   ├── testimonal-img6.jpg
+│   │   ├── testimonal-img7.jpg
+│   │   ├── testimonal-img8.jpg
+│   │   └── testimonal-img9.jpg
+│   ├── logo
+│   │   └── safekey_logo.png
+│   └── screenshot
+│       └── screenshot.jpg
+├── css
+│   └── style.css
+├── index.html
+└── script
+    └── script.js
 
 ```
 
