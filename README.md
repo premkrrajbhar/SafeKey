@@ -1,6 +1,6 @@
 # SafeKey
 
-SafeKey is a secure and reliable password generator that helps you create strong passwords effortlessly. Protect your accounts from cyber threats.
+SafeKey is an open source password generator designed to help users create strong, random passwords to protect their online accounts. It is simple to use, highly customizable, and ensures maximum security by generating unique passwords for each use. SafeKey is completely free and runs entirely in your browser for privacy and security.
 
 ## 🔐 Demo Screenshot
 
@@ -12,17 +12,22 @@ Check out the app live here: **[SafeKey](https://premkrrajbhar.github.io/SafeKey
 
 ## 📋 Features
 
-- **Generate Strong Passwords** using customizable options.
-- **Adjust Password Length** with a slider.
-- **Include/Exclude Characters**: Lowercase, Uppercase, Numbers, Symbols.
-- **Copy to Clipboard** for quick access.
-- **Reset Options** to default settings.
+- **Random Password Generation**: Generate strong passwords with a variety of character types (letters, numbers, symbols).
+- **Customizable Options**: Choose to include or exclude uppercase, lowercase, numbers, and special characters based on your needs.
+- **Instant Password Copying**: Easily copy the generated password to your clipboard with one click.
+- **No Data Storage**: SafeKey does not store or share any passwords you generate. All operations happen directly in your browser.
+- **Completely Free**: SafeKey is free to use with no hidden charges.
 
 ## 🛠️ Technologies Used
 
-- **HTML** – Structure of the web page.
-- **CSS** – Styling for an intuitive UI.
-- **JavaScript** – Logic for password generation and interactions.
+- **HTML** Structure of the web page.
+- **Bootstrap** for responsive layout.
+- **CSS** for fix some elements and background colors.
+- **JavaScript** Logic for password generation and interactions.
+- **AOS library** for smooth animation when scrolling website.
+- **Font Awesome** implements icons for various UI elements.
+- **Random user generator** website for generating random profile pictures for the testimonial section.
+- **Flaticon** provides icons used in the home section.
 
 ## 🚀 How to Use
 
@@ -35,19 +40,7 @@ Check out the app live here: **[SafeKey](https://premkrrajbhar.github.io/SafeKey
 ## 📂 Project Structure
 
 ```
-├── README.md
-├── assets/
-│   ├── favicon/
-│   │   └── safekey-favicon.png
-│   └── screenshot/
-│       └── screenshot.jpg
-├── css/
-│   └── style.css
-├── image/
-│   └── bg-img.jpg
-├── index.html
-└── script/
-    └── script.js
+
 ```
 
 ## 📥 How to Run Locally
@@ -66,6 +59,10 @@ cd SafeKey
 
 - Step 3: Open `index.html` in your web browser.
 
+## 📝LICENSE
+
+SafeKey is open-source software released under the MIT License. This means you are free to use, modify, and distribute the code as per the terms of the MIT license. See the [LICENSE](/LICENSE) file for more information.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue.
@@ -76,4 +73,3 @@ For any questions or feedback, reach out to:
 
 - **Email**: [premkumar224487@gmail.com](mailto:premkumar224487@gmail.com)
 - **GitHub**: [premkrrajbhar](https://github.com/premkrrajbhar)
-
