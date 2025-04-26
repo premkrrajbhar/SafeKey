@@ -44,6 +44,8 @@ function generatePassword() {
     warnPara.innerText =
       "Please generate password using slider and set character set!";
     warnPara.style.color = "red";
+    warnPara.style.fontWeight = "bold"
+    warnPara.style.opacity = "0.6"
     return "";
   }
 
@@ -67,6 +69,8 @@ copyIcon.addEventListener("click", () => {
   if (passBox.value === "") {
     warnPara.innerText = "Please generate a password before copying it!";
     warnPara.style.color = "red";
+    warnPara.style.fontWeight = "bold"
+    warnPara.style.opacity = "0.6"
     return;
   }
 
