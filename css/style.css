@@ -86,8 +86,11 @@ footer .customSize {
   font-size: 0.8rem;
 }
 
+/* media queries for testimonial in smaller devices */
 @media (max-width: 576px) {
-  .customCardWidth {
-    width: 18rem;
+  #testimonials .carousel-item .card {
+    max-height: 250px;
+    overflow-y: auto;
   }
+
 }
