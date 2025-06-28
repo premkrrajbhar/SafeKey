@@ -1,0 +1,96 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-padding-top: 56px;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #03bca6, #004d40);
+}
+
+#home {
+  background: linear-gradient(135deg, #4caf50, #03a9f4);
+}
+
+#about {
+  background: linear-gradient(135deg, #0288d1, #00bcd4);
+}
+
+#about .card {
+  background-color: #e1f5fe;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .card-bg {
+  background: linear-gradient(135deg, #c6e0ef, #1ad3eb)
+}
+
+#about .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#main {
+  background: linear-gradient(135deg, #4bb851, #1976d2);
+}
+
+#main .card {
+  background: linear-gradient(135deg, #63bc66, #03a9f4);
+}
+
+
+#testimonials {
+  background: linear-gradient(135deg, #4caf50, #1e88e5);
+}
+
+#testimonials .customImg {
+  width: 70px;
+  height: 70px;
+}
+
+#testimonials .card {
+  background: linear-gradient(135deg, #e9f0f3, #d6eef1);
+  max-width: 600px;
+}
+
+#faq {
+  background: linear-gradient(135deg, #388e3c, #0288d1);
+}
+
+#faq .accordion-button {
+  background: linear-gradient(135deg, #e9f0f3, #d6eef1);
+  color: black;
+}
+
+#faq .accordion-body {
+  background: linear-gradient(135deg, #c4e3f1, #d6eef1)
+}
+
+footer {
+  background: linear-gradient(90deg, #00796b, #0288d1);
+}
+
+footer .customSize {
+  font-size: 0.8rem;
+}
+
+/* media queries for testimonial in smaller devices */
+@media (max-width: 576px) {
+  #testimonials .carousel-item .card {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+}
