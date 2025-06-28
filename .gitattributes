@@ -1,0 +1,6 @@
+styles/aos.css linguist-vendored
+styles/bootstrap.min.css linguist-vendored
+styles/font-awesome.css linguist-vendored
+scripts/aos.js linguist-vendored
+scripts/bootstrap.bundle.min.js linguist-vendored
+webfonts/** linguist-vendored
