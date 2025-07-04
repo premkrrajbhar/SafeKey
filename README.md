@@ -1,4 +1,4 @@
-# SafeKey
+# SafeKey  [![Version](https://img.shields.io/badge/version-v2.0.3-green.svg)](./CHANGELOG.md)
 
 SafeKey is an open source password generator designed to help users create strong, random passwords to protect their online accounts. It is simple to use, highly customizable, and ensures maximum security by generating unique passwords for each use. SafeKey is completely free and runs entirely in your browser for privacy and security.
 
@@ -60,7 +60,8 @@ Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 ## 📄 Changelog
 
-See [CHANGELOG](./CHANGELOG.md) for a complete list of updates, fixes and version history.
+- See [CHANGELOG](./CHANGELOG.md) for a complete list of updates, fixes and version history.
+- **Current Version:** `v2.0.3`
 
 
 ## 📝LICENSE
