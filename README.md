@@ -53,13 +53,20 @@ cd SafeKey
 
 - Step 3: Open `index.html` in your web browser.
 
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit a pull request or open an issue.
+
+
+## 📄 Changelog
+
+See [CHANGELOG](./CHANGELOG.md) for a complete list of updates, fixes and version history.
+
+
 ## 📝LICENSE
 
 SafeKey is open-source software released under the MIT License. This means you are free to use, modify, and distribute the code as per the terms of the MIT license. See the [LICENSE](/LICENSE) file for more information.
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 ## 📞 Contact
 
